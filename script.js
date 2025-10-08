@@ -33,3 +33,11 @@ function onYouTubeIframeAPIReady() {
     logo.classList.add('jiggle');      // start animation
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('ul li').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('checked');
+    });
+  });
+});
