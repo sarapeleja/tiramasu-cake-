@@ -38,48 +38,39 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Masonry / brick layout */
 main {
+  margin-top: 10px;
   flex: 1;
-  max-width: 80vw;
-  margin: 2rem auto;
-  padding: 0;
-}
-
-/* Masonry / side-by-side layout */
-.grid {
   display: flex;
-  /* space between columns */
-  flex-wrap: wrap;
-  /* allow wrapping on smaller screens */
+  justify-content: center;
+  /* center grid horizontally */
+  padding: 1rem;
 }
 
-/* Grid layout for ingredients and steps */
 .grid {
   display: grid;
   grid-template-columns: 3fr 7fr;
-  height: 80%;
-  /* occupy middle 80% of viewport */
-  gap: 5vw;
-  /* space between columns I WANT IT TO BE 10vw */
-  justify-content: center;
-  /* center the grid content inside main */
+  gap: 1rem 6vw;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.grid section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(16, 24, 40, 0.06);
+  width: 100%;
 }
 
 @media (max-width: 720px) {
   .grid {
     grid-template-columns: 1fr;
-    /* stack on small screens */
+    justify-items: center;
+    gap: 1rem;
+    width: 80%;
   }
 }
-
-.grid section {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 6px 24px rgba(16, 24, 40, 0.06);
-}
-
 
 /* Sections as cards */
 section {
